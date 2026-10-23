@@ -1,0 +1,42 @@
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1596568359546-24baeb9e2b1e?auto=format&fit=crop&q=80') center/cover;
+    height: 500px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.hero-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.quick-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.quick-card {
+    flex: 1;
+    min-width: 200px;
+    padding: 30px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    color: var(--primary);
+}
+.quick-card:hover {
+    transform: translateY(-5px);
+}

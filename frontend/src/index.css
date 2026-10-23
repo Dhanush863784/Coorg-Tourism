@@ -1,0 +1,136 @@
+:root {
+  /* Nature & Heritage Color Palette inspired by Dribbble Coorg Aesthetic */
+  --bg-page: #EDF3EC;
+  --bg-card: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  
+  --forest-dark: #11281D;
+  --forest-deep: #163627;
+  --forest-medium: #1F4A36;
+  --forest-light: #2D6A4F;
+  
+  --sage-tint: #DFECE0;
+  --sage-badge: #D4E5D5;
+  --sage-border: #CFDEC0;
+  
+  --accent-sun: #F5B838;
+  --accent-sun-bg: #FEF6E4;
+  --accent-terracotta: #D96B43;
+  --accent-coffee: #6F4E37;
+  
+  --text-primary: #12231A;
+  --text-secondary: #4A5B51;
+  --text-muted: #7E9085;
+  --text-light: #F7FAF7;
+  
+  --border-light: rgba(18, 40, 29, 0.08);
+  --border-subtle: rgba(18, 40, 29, 0.12);
+  
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 34px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 4px 12px rgba(17, 40, 29, 0.04);
+  --shadow-md: 0 8px 24px rgba(17, 40, 29, 0.06);
+  --shadow-lg: 0 16px 36px rgba(17, 40, 29, 0.09);
+  --shadow-floating: 0 20px 48px rgba(17, 40, 29, 0.12);
+  
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--forest-dark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+::-webkit-scrollbar-thumb {
+  background: #C4D6C6;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AEC5B1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s var(--transition-smooth) forwards;
+}
+
+/* Map popup styling overrides */
+.leaflet-popup-content-wrapper {
+  border-radius: 18px !important;
+  box-shadow: 0 12px 30px rgba(17, 40, 29, 0.15) !important;
+  padding: 4px !important;
+  font-family: var(--font-body) !important;
+}
+.leaflet-popup-content {
+  margin: 8px 12px !important;
+  line-height: 1.4 !important;
+}

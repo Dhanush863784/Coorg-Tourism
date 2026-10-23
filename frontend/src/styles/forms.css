@@ -1,0 +1,28 @@
+
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.form-container button {
+    width: 100%;
+    margin-top: 10px;
+}
